@@ -22,9 +22,8 @@ export class AddBikeComponent implements OnInit {
 
   constructor( private activatedRouter: ActivatedRoute, private bikeService: BikesService, private stationService: StationsService) { }
   station = new Stations;
-  
 
-  ngOnInit() {    
+  ngOnInit() {
     this.activatedRouter.params.subscribe(params => {
       this.station._id = params['id'];
       });
