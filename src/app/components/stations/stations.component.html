@@ -1,17 +1,22 @@
 <ion-header>
-    <ion-title>This are the station</ion-title>
+    <ion-title>Stations</ion-title>
 </ion-header>
 
 <ion-content>
         <div *ngFor = "let station of stations ">
-                <h6> The station is: {{station.station}}</h6>
-                <p>{{station.state}}, {{station.description}}</p>    
-                <p>The bike in this station are: {{station.bikes}}</p>
+            <ion-grid>
+                <ion-card>
+                        <h6>The station is: {{station.station}} </h6>
+                    <ion-col size="6">
+                        <p>{{station.state}}, {{station.description}}</p>    
+                    </ion-col>
+                    <ion-col size="6">
+                        <p>The bikes in this station are: {{station.bikes}}</p>
+                    </ion-col>
+                            <ion-button [routerLink]  = "['/api/relacion/add', station._id]">Add bike to {{station.station}} </ion-button> 
+                            <ion-button [routerLink]  = "['/api/relacion/delete', station._id]"  >Delete bike of {{station.station}} </ion-button>
+                </ion-card>
+            </ion-grid>
                 
-            <ion-button [routerLink]  = "['/api/relacion/add', station._id]">Add bike in this station </ion-button>
-            <p></p>
-            <ion-button [routerLink]  = "['/api/relacion/delete', station._id]"  >Delete bike for a station </ion-button>
-            </div>
-
-</ion-content>
+        </div>
 

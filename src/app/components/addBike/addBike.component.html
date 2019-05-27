@@ -1,12 +1,12 @@
 <ion-header>
-    <ion-title>List of all the bike</ion-title>
+    <ion-title>Bikes to add</ion-title>
 </ion-header>
 
 <ion-content>
         <div *ngFor = 'let one of bike; let i=index'>
-                <h6> The bike is: {{one.bike}}</h6>
+                <h6> {{one.bike}}</h6>
                 <p></p>
-                 <ion-button type="submit" (click)="addBike(one._id)">Add bike</ion-button>  
+                 <ion-button color='success' type="submit" (click)="addBike(one._id)">Add bike</ion-button>  
                 <p></p>
             </div>
 </ion-content>

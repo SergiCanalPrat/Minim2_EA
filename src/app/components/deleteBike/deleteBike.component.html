@@ -1,12 +1,12 @@
 <ion-header>
-    <ion-title>Bike for delete </ion-title>
+    <ion-title>Bikes to delete </ion-title>
 </ion-header>
 
 <ion-content>
         <div *ngFor = 'let id of bike; let i=index'>
-                <h6> The bike is: {{id}}</h6>
+                <h6> The bike is: {{bike}}</h6>
                 <p></p>
-                 <ion-button type="submit" (click)="deleteBike(id)">Delate bike</ion-button>  
+                 <ion-button type="submit" (click)="deleteBike(id)">Delete bike</ion-button>  
                 <p></p>
             </div>
             
